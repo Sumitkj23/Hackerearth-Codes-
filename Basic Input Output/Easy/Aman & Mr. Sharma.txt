@@ -1,0 +1,17 @@
+# include<stdio.h>
+int main()
+{
+   long int d,r,x,s,c=0;
+   scanf("%d",&d);
+   while(d)
+   {
+       scanf("%d %d",&r,&x);
+       s=(700*x)/44;
+       if(r<=s)
+       c++;
+       d--;
+   }
+   printf("%d",c);
+}
+		// By Skj..
+		//Language: C

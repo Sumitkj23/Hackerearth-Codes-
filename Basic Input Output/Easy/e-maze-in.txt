@@ -1,0 +1,23 @@
+# include<stdio.h>
+int main()
+{
+    char s[201],l,r,u,d;
+    int c=0,f=0,i;
+    scanf("%s",s);
+    for(i=0;i<strlen(s);i++)
+    {
+        if(s[i]==76)
+          c--;
+        else if(s[i]==82)
+          c++;
+        else if(s[i]==85)
+          f++;
+        else if(s[i]==68)
+          f--;
+    }
+    printf("%d %d",c,f);
+    return 0;
+}
+
+		// By Skj..
+		//Language: C

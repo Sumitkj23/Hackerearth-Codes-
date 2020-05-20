@@ -1,0 +1,37 @@
+# include<stdio.h>
+int main()
+{
+    int a,b,n,s,k,t,i;
+    scanf("%d",&t);
+    for(i=1;i<=t;i++)
+ {
+    scanf("%d",&n);
+    s=(n-1)/6;
+    if(s%2==0)
+    {
+        a=n%6;
+        if(a==0)
+           b=5;
+        else
+           b=a-1;
+        k=n+12-(2*b)-1;
+    }
+    else
+    {
+         a=n%6;
+         if(a==0)
+            a=6;
+         k=n+1-(2*a);
+    }
+    printf("%d ",k);
+    if(n%6==1 || n%6==0)
+        printf("WS\n");
+    if(n%6==2 || n%6==5)
+        printf("MS\n");
+    if(n%6==3 || n%6==4)
+        printf("AS\n");
+  }
+    return 0;
+}
+		// By Skj..
+		//Language: C

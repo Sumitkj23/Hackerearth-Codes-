@@ -1,0 +1,28 @@
+/*
+// Sample code to perform I/O:
+#include <stdio.h>
+ 
+int main(){
+	int num;
+	scanf("%d", &num);              			// Reading input from STDIN
+	printf("Input number is %d.\n", num);       // Writing output to STDOUT
+}
+ 
+// Warning: Printing unwanted or ill-formatted data to output will cause the test cases to fail
+*/
+ 
+// Write your code here
+# include<stdio.h>
+int main()
+{
+    int t,n;
+    scanf("%d",&t);
+    while(t)
+    {
+        scanf("%d",&n);
+        printf("YES\n");
+        t--;
+    }
+}
+		// By Skj..
+		//Language: C

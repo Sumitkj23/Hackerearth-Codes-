@@ -1,0 +1,74 @@
+/*
+// Sample code to perform I/O:
+#include <stdio.h>
+ 
+int main(){
+	int num;
+	scanf("%d", &num);              			// Reading input from STDIN
+	printf("Input number is %d.\n", num);       // Writing output to STDOUT
+}
+ 
+// Warning: Printing unwanted or ill-formatted data to output will cause the test cases to fail
+*/
+ 
+// Write your code here
+# include<stdio.h>
+int main()
+{
+    char s[10];
+    int k,temp=1;
+    scanf("%s",s);
+    
+        k=(s[0]-48)+(s[1]-48);  
+        temp=iseven(k);         
+        if(temp==0)
+          {
+              printf("invalid");
+              return 0;
+          }
+        
+        
+        if(s[2]=='A' || s[2]=='E' || s[2]=='I' || s[2]=='O' || s[2]=='U' || s[2]=='Y')
+        {
+            temp=0;
+            printf("invalid");
+              return 0;
+        }
+        
+          k=(s[3]-48)+(s[4]-48);
+          temp=iseven(k);
+          if(temp==0)
+          {
+              printf("invalid");
+              return 0;
+          }
+            
+          k=(s[4]-48)+(s[5]-48);
+          temp=iseven(k);
+          if(temp==0)
+          {
+              printf("invalid");
+              return 0;
+          }
+          
+          k=(s[7]-48)+(s[8]-48);
+          temp=iseven(k);
+          if(temp==0)
+          {
+              printf("invalid");
+              return 0;
+          }
+          
+    printf("valid");
+    return 0;
+    
+}
+int iseven(int k)
+{
+    if(k%2==0)
+      return 1;
+    else
+      return 0;
+}
+		// By Skj..
+		//Language: C

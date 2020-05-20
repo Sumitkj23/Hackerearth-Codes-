@@ -1,0 +1,58 @@
+/*
+// Sample code to perform I/O:
+ 
+cin >> name;                            // Reading input from STDIN
+cout << "Hi, " << name << ".\n";        // Writing output to STDOUT
+ 
+// Warning: Printing unwanted or ill-formatted data to output will cause the test cases to fail
+*/
+ 
+// Write your code here
+
+# include<iostream>
+using namespace std;
+int main()
+{
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
+ 
+    string s;
+    int i,k,l,t,size;
+        cin>>s;
+        cin>>k;
+        size=s.length();
+        l=k;
+        for(i=0;i<size;i++)
+        {
+            if(s[i]>=65 && s[i]<=90)
+            {
+                l=k%26;
+                if(s[i]+l>90)
+                    s[i]+=l-26;
+                else
+                    s[i]+=l;
+            }
+            else if(s[i]>=97 && s[i]<=122)
+            {
+                l=k%26;
+                if(s[i]+l>122)
+                    s[i]+=l-26;
+                else
+                    s[i]+=l;
+            }
+            else if(s[i]>=48 && s[i]<=57)
+            {
+                l=k%10;
+                if(s[i]+l>57)
+                    s[i]+=l-10;
+                else
+                    s[i]+=l;
+            }
+            else
+                s[i]=s[i];
+        }
+        cout<<s<<"\n";
+    return 0;
+}
+		// By Skj..
+		// Language : C++14

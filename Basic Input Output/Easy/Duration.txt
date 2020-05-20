@@ -1,0 +1,21 @@
+# include<stdio.h>
+int main()
+{
+    int n,sh,sm,eh,em,x,y,z,i,j;
+    scanf("%d",&n);
+    while(n)
+    {
+        scanf("%d %d %d %d ",&sh,&sm,&eh,&em);
+        x=(60*eh)+em;
+        y=(60*sh)+sm;
+        z=x-y;
+        i=z/60;
+        j=z%60;
+        printf("%d %d\n",i,j);
+        n--;
+    }
+    return 0;
+}
+
+		// By Skj..
+		//Language: C

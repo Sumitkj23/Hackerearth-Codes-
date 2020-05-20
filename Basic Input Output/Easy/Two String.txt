@@ -1,0 +1,35 @@
+# include<stdio.h>
+# include<string.h>
+int main()
+{
+    unsigned char s[100001],str[100001];
+    int i,j,t,l,k;
+    register int c,count;
+    scanf("%d",&t);
+    for(k=1;k<=t;k++)
+    {
+    count=0;
+    scanf("%s",s);
+    scanf("%s",str);
+    l=strlen(str);
+    for(i=0;s[i];i++){
+      for(j=count;str[j];j++)
+           if(s[i]==str[j])
+          {
+            c=str[j];
+            str[j]=str[i];
+            str[i]=c;
+            count++;
+            break;
+          }
+        if(i==count)
+            break;
+}    if(l==count)
+        printf("YES\n");
+    else
+        printf("NO\n");
+    }
+    return 0;
+}
+		// By Skj..
+		// Language: C

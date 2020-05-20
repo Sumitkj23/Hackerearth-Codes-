@@ -1,0 +1,55 @@
+import java.io.*;
+import java.util.*;
+ 
+ 
+public class TestClass {
+    public static void main(String[] args) throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        PrintWriter wr = new PrintWriter(System.out);
+         int N = Integer.parseInt(br.readLine().trim());
+         String[] arr_A = br.readLine().split(" ");
+         int[] A = new int[N];
+         for(int i_A=0; i_A<arr_A.length; i_A++)
+         {
+         	A[i_A] = Integer.parseInt(arr_A[i_A]);
+         }
+ 
+         String out_ = solve(A);
+         System.out.println(out_);
+ 
+         wr.close();
+         br.close();
+    }
+    static String solve(int[] A){
+        // Write your code here
+        
+        int i,j,e=0,o=0,p=0;
+        int N=A.length;
+        for(i=0;i<N/2;i++)
+        {
+            while(A[i]!=0)
+            {
+                p=A[i];
+                A[i]/=10;
+            }
+            if(i%2==0)
+                e=e+p;
+            else
+                o=o+p;
+        }
+        for(j=i;j<N;j++)
+        {
+            if(j%2==0)
+                e=e+A[j]%10;
+            else
+                o=o+A[j]%10;
+        }
+        if((e-o)%11==0 || (o-e)%11==0)
+            return "OUI";
+        else
+            return "NON";
+ 
+    }
+}
+		// By Skj..
+		// Language : Java

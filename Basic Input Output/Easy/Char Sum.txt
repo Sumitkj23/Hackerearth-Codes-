@@ -1,0 +1,13 @@
+# include<stdio.h>
+# include<string.h>
+int main()
+{
+    char s[101];
+    int k=0,i;
+    scanf("%s",s);
+    for(i=0;i<strlen(s);i++)
+       k=s[i]-96+k;
+    printf("%d",k);
+}
+		// By Skj..
+		//Language: C

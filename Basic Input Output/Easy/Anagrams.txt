@@ -1,0 +1,48 @@
+/*
+// Sample code to perform I/O:
+ 
+cin >> name;                            // Reading input from STDIN
+cout << "Hi, " << name << ".\n";        // Writing output to STDOUT
+ 
+// Warning: Printing unwanted or ill-formatted data to output will cause the test cases to fail
+*/
+ 
+// Write your code here
+# include<iostream>
+# include<string.h>
+using namespace std;
+int main()
+{
+    char s[10001];
+    char str[10001];
+    int p[27],t,i,k;
+    int q[27];
+    int l,m;
+    cin>>t;
+    while(t)
+    {
+        cin>>s;
+        cin>>str;
+        k=0;
+        l=strlen(s);
+        m=strlen(str);
+        for(i=0;i<26;i++)
+        {
+            p[i]=0;
+            q[i]=0;
+        }
+        for(i=0;i<l;i++)
+          p[s[i]-97]++;
+        for(i=0;i<m;i++)
+          q[str[i]-97]++;
+          
+        for(i=0;i<26;i++)
+          k=k+abs(p[i]-q[i]);
+          
+        cout<<k<<endl;
+        t--;
+    }
+    return 0;
+}
+		// By Skj..
+		//Language: C++14
