@@ -1,0 +1,40 @@
+/*
+// Sample code to perform I/O:
+ 
+cin >> name;                            // Reading input from STDIN
+cout << "Hi, " << name << ".\n";        // Writing output to STDOUT
+ 
+// Warning: Printing unwanted or ill-formatted data to output will cause the test cases to fail
+*/
+ 
+// Write your code here
+#include<bits/stdc++.h>
+using namespace std;
+ 
+bool mysortfun(pair<string,int> &a,pair<string,int> &b)
+{
+       return a.second>b.second;
+}
+ 
+ 
+int main()
+{
+    vector< pair <string,int> > vect;
+    int n;
+    cin>>n;
+    string s[n];
+    int a[n],i;
+    for(i=0;i<n;i++)
+        cin>>s[i]>>a[i];
+    for (i=0;i<n;i++)
+        vect.push_back( make_pair(s[i],a[i]) );
+ 
+    sort(vect.begin(), vect.end(), mysortfun);
+ 
+    for (int i=0; i<3; i++)
+        cout<<vect[i].first<<"\n";
+        
+    return 0;
+}
+		// By Skj..
+		Language: C++14
